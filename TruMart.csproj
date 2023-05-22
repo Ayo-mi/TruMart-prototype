@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{69C91EA7-B4CC-46D3-B058-AE9EF6B113DA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TruMart</RootNamespace>
+    <AssemblyName>TruMart</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.Charts.WinForms, Version=1.0.4.0, Culture=neutral, PublicKeyToken=70866663edbc6595, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.Charts.WinForms.1.0.4\lib\net40\Guna.Charts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.3.5\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>Lib\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="OnBarcode.Barcode.WinForms">
+      <HintPath>Lib\OnBarcode.Barcode.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cards\Card.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cards\Card.Designer.cs">
+      <DependentUpon>Card.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cards\Util\CardRow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cards\Util\CardRow.Designer.cs">
+      <DependentUpon>CardRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reports\CardsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\CardsReport.Designer.cs">
+      <DependentUpon>CardsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SalesReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SalesReport.Designer.cs">
+      <DependentUpon>SalesReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sell\POS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sell\POS.Designer.cs">
+      <DependentUpon>POS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sell\SalesHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sell\SalesHistory.Designer.cs">
+      <DependentUpon>SalesHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sell\Util\Row.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sell\Util\Row.Designer.cs">
+      <DependentUpon>Row.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sell\Util\RowData.cs" />
+    <Compile Include="Settings\Outlets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\Outlets.Designer.cs">
+      <DependentUpon>Outlets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Roles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\Roles.Designer.cs">
+      <DependentUpon>Roles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util\Barcode.cs" />
+    <Compile Include="Util\Database.cs" />
+    <Compile Include="Util\DBConfig.cs" />
+    <Compile Include="Util\Functions.cs" />
+    <Compile Include="Util\overlayBg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Util\overlayBg.Designer.cs">
+      <DependentUpon>overlayBg.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Cards\Card.resx">
+      <DependentUpon>Card.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cards\Util\CardRow.resx">
+      <DependentUpon>CardRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CardsReport.resx">
+      <DependentUpon>CardsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SalesReport.resx">
+      <DependentUpon>SalesReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sell\POS.resx">
+      <DependentUpon>POS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sell\SalesHistory.resx">
+      <DependentUpon>SalesHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sell\Util\Row.resx">
+      <DependentUpon>Row.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\Outlets.resx">
+      <DependentUpon>Outlets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\Roles.resx">
+      <DependentUpon>Roles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Util\overlayBg.resx">
+      <DependentUpon>overlayBg.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Users_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\shutdown_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Users_50px_w.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\enter_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\logout_50px_w.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\laptop_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\shutdown_50px_w.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\customs_officer_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\customs_officer_50px_w.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\laptop_50px_g.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\add_user_male_50px_w.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\add_user_male_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\administrator_male_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\administrator_male_50px_w.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\enter_50px_g.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\search_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\edit_profile_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\edit_profile_50px_w.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Barcode Reader_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\search_50px_w.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\close_50px_w.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\add_50px_g.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\add_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\edit_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\edit_50px_w.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\save_50px_w.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\waste_120px.png" />
+    <None Include="Icons\prepaid_recharge_120px.png" />
+    <None Include="Icons\total_sales_120px.png" />
+    <None Include="Icons\expand_arrow_120px.png" />
+    <None Include="Icons\edit_120px.png" />
+    <None Include="Icons\envelope_120px.png" />
+    <None Include="Icons\print_120px.png" />
+    <None Include="Icons\unavailable_120px.png" />
+    <None Include="Icons\forward_120px.png" />
+    <None Include="Icons\Card Payment_120px2.png" />
+    <None Include="Icons\Card Payment_120px.png" />
+    <None Include="Icons\naira_50px.png" />
+    <None Include="Icons\mastercard_logo_480px.png" />
+    <None Include="Icons\chip_card_480px.png" />
+    <None Include="Icons\people_120px2.png" />
+    <None Include="Icons\people_120px.png" />
+    <None Include="Icons\role_120px.png" />
+    <None Include="Icons\role_120px2.png" />
+    <None Include="Icons\price_tag_120px.png" />
+    <None Include="Icons\naira_120px.png" />
+    <None Include="Icons\Store_120px2.png" />
+    <None Include="Icons\Store_120px.png" />
+    <None Include="Icons\topup_payment_120px.png" />
+    <None Include="Icons\topup_payment_120px2.png" />
+    <None Include="Icons\report_sales_120px2.png" />
+    <None Include="Icons\report_sales_120px.png" />
+    <None Include="Icons\Cards_120px.png" />
+    <None Include="Icons\Cards_120px_2.png" />
+    <None Include="Icons\smart_card_reader_120px.png" />
+    <None Include="Icons\smart_card_reader_120px_2.png" />
+    <None Include="Icons\sales_report_120px_2.png" />
+    <None Include="Icons\sales_report_120px.png" />
+    <None Include="Icons\briefcase_300px.png" />
+    <None Include="Icons\dashboard_layout_100px.png1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
