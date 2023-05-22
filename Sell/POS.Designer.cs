@@ -44,6 +44,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+            this.guna2HScrollBar1 = new Guna.UI2.WinForms.Guna2HScrollBar();
             this.panel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.Guna2CustomGradientPanel1.SuspendLayout();
@@ -53,6 +54,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.guna2HScrollBar1);
             this.panel1.Controls.Add(this.guna2Panel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -62,6 +64,7 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.AutoScroll = true;
             this.guna2Panel1.Controls.Add(this.Guna2CustomGradientPanel1);
             this.guna2Panel1.Controls.Add(this.guna2Button1);
             this.guna2Panel1.Controls.Add(this.guna2TextBox2);
@@ -78,7 +81,7 @@
             // 
             // Guna2CustomGradientPanel1
             // 
-            this.Guna2CustomGradientPanel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Guna2CustomGradientPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Guna2CustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.Guna2CustomGradientPanel1.BorderRadius = 15;
             this.Guna2CustomGradientPanel1.Controls.Add(this.Label4);
@@ -91,7 +94,7 @@
             this.Guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(150)))), ((int)(((byte)(212)))));
             this.Guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(63)))), ((int)(((byte)(197)))));
             this.Guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(150)))), ((int)(((byte)(212)))));
-            this.Guna2CustomGradientPanel1.Location = new System.Drawing.Point(488, 60);
+            this.Guna2CustomGradientPanel1.Location = new System.Drawing.Point(454, 98);
             this.Guna2CustomGradientPanel1.Name = "Guna2CustomGradientPanel1";
             this.Guna2CustomGradientPanel1.ShadowDecoration.BorderRadius = 15;
             this.Guna2CustomGradientPanel1.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(63)))), ((int)(((byte)(197)))));
@@ -307,6 +310,19 @@
             this.label22.TabIndex = 24;
             this.label22.Text = "Amount To Debit";
             // 
+            // guna2HScrollBar1
+            // 
+            this.guna2HScrollBar1.AutoRoundedCorners = true;
+            this.guna2HScrollBar1.BindingContainer = this.guna2Panel1;
+            this.guna2HScrollBar1.BorderRadius = 8;
+            this.guna2HScrollBar1.InUpdate = false;
+            this.guna2HScrollBar1.LargeChange = 10;
+            this.guna2HScrollBar1.Location = new System.Drawing.Point(0, 420);
+            this.guna2HScrollBar1.Name = "guna2HScrollBar1";
+            this.guna2HScrollBar1.ScrollbarSize = 18;
+            this.guna2HScrollBar1.Size = new System.Drawing.Size(859, 18);
+            this.guna2HScrollBar1.TabIndex = 28;
+            // 
             // POS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -345,5 +361,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
         private System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2HScrollBar guna2HScrollBar1;
     }
 }
